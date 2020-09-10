@@ -1,26 +1,28 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("13");
-        System.out.println(26);
-        final int s = 3;
-        System.out.println(s);
-        int t = 8;
-        System.out.println(s-t);
-        /*int o;
-        boolean o;*/
-        System.out.println("o");
-        char y = 9;
-        double i = 7;
-        double rr = y / i;
-        String ion = "вычисления ";
-        System.out.println(ion + rr);
+    /*1) превратить строку "Шаурмяу" в строку "Шаурма". вывести строку до и после в формате:
+    System.out.println("до: " + line);
+    и также для после - после преобразования.
+    Также выводить исходную строку и результат для всех примеров:
+    2) "Много $" превратить в "Много &"
+    3) "осталось много времени до нового года" - превратите в "осталось 4 месяца до нового года".
+    4) превратите из предыдущей строки количество месяцев в цифру. Уменьшите ее на единицу. выведите.
+    5) задание со звездочкой: превратить "Децибел" в "имбецил"  */
 
+        String p1 = "Шаурмяу";
+        System.out.println("До: " + p1 + "\n" + "После: " + p1.replace ("яу", "а"));
 
-        //https://metanit.com/java/tutorial/2.12.php*/
-        //Ctrl+Alt+L = выравнивание всех строк
-       // Ctrl+D = дублировать
-       // Ctrl+Y = убийство
-       // Ctrl+Z = вырезание в буфыр
-// ссылочные переменные хранят адрес ячейки памяти в которой расположен объект
+        String p2 = "Много $";
+        System.out.println("До: " + p2 + "\n" + "После: " + p2.replace("$", "&"));
+
+        String p3 = "осталось много времени до нового года";
+        String p4 = p3.replace("много времени", "4 месяца");
+        System.out.println("До: " + p3 + "\n" + "После: " + p4);
+
+        System.out.println("Число выше минус 1: " + (Integer.parseInt(p4.substring(9,10)) - 1));
+
+        String p5 = "Децибел";
+        System.out.println("До: " + p5 + "\n" + "После: " + p5.substring(3,4).toUpperCase() + p5.replace("Де",
+                "м").charAt(0) + p5.substring(4,6) + p5.substring(2,4) + p5.substring(6));
     }
 }
